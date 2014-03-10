@@ -6,7 +6,7 @@ import com.jfinal.core.ActionInvocation;
 /**
  * BlogInterceptor
  */
-public class BlogInterceptor implements Interceptor {
+public class UserInterceptor implements Interceptor {
 	
 	public void intercept(ActionInvocation ai) {
 		System.out.println("Before invoking " + ai.getActionKey());
