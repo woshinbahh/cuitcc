@@ -1,0 +1,33 @@
+@CHARSET "UTF-8";
+
+.cc-node-bar {
+	font-size: 18px;
+	margin-top: 10px;
+	background: #FFFFF9;
+	padding-top: 10px;
+	padding: 10px 10px 10px 30px;
+}
+
+.cc-post-item-title {
+	white-space: nowrap;
+	overflow-x: hidden;
+}
+
+.cc-post-item-info-cell {
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+span.badge a,span.label a {
+	color: #FFFFFF;
+}
+
+span.badge a:hover,span.badge a:active,span.label a:hover,span.label a:active
+	{
+	color: #007FFF;
+}
+
+.cc-post-item-info-cell {
+	color: #CCCCCC;
+}
