@@ -4,15 +4,41 @@ body {
 	background: #F1F1F1;
 }
 
-.cuitcc-content {
+footer {
+	weight: 100%;
 	background: #FFFFFF;
+	margin-top: 100px;
+	padding-top: 10px;
+	border-top: 1px solid #CCCCCC;
 }
 
-.cc-node-bar {
- 	font-size: 18px;
+a,.pagination>li>a {
+	color: #8A96A2;
+}
+
+.table>tbody>tr>td a {
+	text-decoration: none;
+}
+
+.cuitcc-content-left {
+	background: #FFFFFF;
+	padding: 5px;
+	margin: 10px 0;
+	border: 1px solid #CCCCCC;
+}
+
+.cuitcc-content-right {
+	background: #FFFFFF;
+	padding: 5px;
+	margin: 10px 0 10px 10px;
+	border: 1px solid #CCCCCC;
+}
+
+.cuitcc-node-bar {
 	margin-top: 10px;
-	background: #000000;
-/*	padding: 10px 10px 10px 30px; */
+	background: #F5F5F5;
+	padding: 8px 15px;
+	font-size: 18px;
 }
 
 .cc-post-item-title {
@@ -20,10 +46,19 @@ body {
 	overflow-x: hidden;
 }
 
+.cc-post-item {
+	margin-bottom: -10px;
+}
+
+.cc-post-item-info {
+	height: 30px;
+	line-height: 30px;
+}
+
 .cc-post-item-info-cell {
 	height: 30px;
 	line-height: 30px;
-	overflow: hidden;
+	color: #CCCCCC;
 }
 
 .badge a,.label a {
@@ -34,19 +69,70 @@ body {
 	color: #007FFF;
 }
 
-.cuitcc-node-list-item a,#cuitcc-tab-td a {
-	margin: 0 20px 0 0;
-	color: #8A96A2;
+.cuitcc-node-list-item a {
+	margin-right: 20px;
 	line-height: 200%;
-	text-decoration: none;
 }
 
-.cuitcc-node-list-item a:hover,.cuitcc-node-list-item a:active,#cuitcc-tab-td a:active,#cuitcc-tab-td a:hover
-	{
-	text-decoration: underline;
-}
-
-#cuitcc-tab-td {
+.table>tbody>tr>td.cuitcc-tab-td {
 	vertical-align: middle;
-	padding-right: 20px;
+	padding-right: 40px;
+	font-style: italic;
+}
+
+.table>tbody>tr>td.cuitcc-post-hot-td {
+	vertical-align: middle;
+}
+
+.table>tbody>tr.cuitcc-table-no-border>td {
+	border: 0;
+}
+
+.cuitcc-item-node {
+	margin: 3px 5px;
+}
+
+.cuitcc-post-title {
+	margin-top: -15px;
+	margin-bottom: -15px;
+	padding: 5px;
+}
+
+.cuitcc-post-content {
+	padding: 5px;
+}
+
+.cuitcc-post-title h4 {
+	line-height: 150%;
+}
+
+.cuitcc-post-menu {
+	background: #CCCCCC;
+}
+
+.cuitcc-post-append {
+	padding: 5px;
+	background: #FFFFF9;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.cuitcc-post-review-info {
+	padding: 5px;
+	background: #FFFFF9;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.cuitcc-post-tags {
+	padding: 5px;
+	margin: 10px;
+}
+
+.cuitcc-post-tags>.label {
+	margin-left: 10px;
+	font-size: 15px;
+}
+
+.cuitcc-reply {
+	border-top: 1px solid #CCCCCC;
+	padding: 5px 20px 5px 5px;
 }
