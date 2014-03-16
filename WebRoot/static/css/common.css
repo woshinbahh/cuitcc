@@ -17,181 +17,142 @@ a,.pagination>li>a {
 	color: #8A96A2;
 }
 
-.table>tbody>tr>td a {
-	text-decoration: none;
-}
-
-.cuitcc-content-left {
+.content-left {
 	background: #FFFFFF;
 	padding: 5px;
 	margin: 10px 0;
 	border: 1px solid #CCCCCC;
 }
 
-.cuitcc-content-right {
+.content-right {
 	background: #FFFFFF;
 	padding: 5px;
-	margin: 10px 0 10px 10px;
+	margin: 10px 0 0 -20px;
 	border: 1px solid #CCCCCC;
 }
 
-.cuitcc-node-bar {
-	margin-top: 10px;
-	background: #F5F5F5;
-	padding: 8px 15px;
-	font-size: 18px;
+.content-title {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCCCCC;
 }
 
-.cc-post-item-title {
+.breadcrumb-div {
+	margin-bottom: -15px;
+}
+
+.node-bar {
+	margin-top: 10px;
+	padding: 5px;
+	background: #F5F5F5;
+}
+
+.node-bar>button {
+	font-size: 15px;
+	margin-left: 10px;
+}
+
+.node-bar>button>a {
+	color: #FFFFFF;
+}
+
+.pagination-div {
+	text-align: right;
+	padding-right: 2%;
+}
+
+.content-item {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.post-item {
 	white-space: nowrap;
 	overflow-x: hidden;
 }
 
-.cc-post-item {
-	margin-bottom: -10px;
+.content-body>table>tbody>tr>td {
+	border: 0px;
+	vertical-align: middle;
 }
 
-.cc-user-post-item {
-	margin-bottom: -10px;
-	padding: 0 30px;
+.content-body>table>tbody>tr>td.center-title {
+	text-align: center;
 }
 
-.cc-post-item-info {
+.right-title {
+	text-align: right;
+}
+
+.content-body>table>tbody>tr>td a {
+	text-decoration: none;
+}
+
+.catlog-item>a {
+	margin-right: 20px;
+	line-height: 2em;
+}
+
+.content-justify {
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.content-justify a {
+	margin: 3px 5px;
+}
+
+.content-body {
+	margin-top: 15px;
+}
+
+.content-highlight {
+	background: #FFFFF9;
+	border-left: 5px solid #FFFBC1;
+}
+
+.post-tags {
+	text-align: right;
+}
+
+.post-tags>span {
+	margin-left: 10px;
+}
+
+.post-tags>span>a {
+	font-size: 15px;
+}
+
+.content-footer {
+	margin-top: 10px;
+	background: #CCCCCC;
+}
+
+.small-label {
 	height: 30px;
 	line-height: 30px;
-}
-
-.cc-post-item-info-cell {
-	height: 30px;
-	line-height: 30px;
-	color: #CCCCCC;
+	color: #007FFF;
 }
 
 .badge a,.label a {
 	color: #FFFFFF;
 }
 
-.badge a:hover,.badge a:active,.label a:hover,.label a:active {
+.badge a:hover,.badge a:active {
 	color: #007FFF;
 }
 
-.cuitcc-node-list-item a {
-	margin-right: 20px;
-	line-height: 200%;
+.user-review-post {
+	background: #F5F5F5;
 }
 
-.table>tbody>tr>td.cuitcc-tab-td {
-	vertical-align: middle;
-	padding-right: 40px;
-	font-style: italic;
-}
-
-.table>tbody>tr>td.cuitcc-post-hot-td {
-	vertical-align: middle;
-}
-
-.table>tbody>tr.cuitcc-table-no-border>td {
-	border: 0;
-}
-
-.cuitcc-item-node {
-	margin: 3px 5px;
-}
-
-.cuitcc-post-title {
-	margin-top: -15px;
-	margin-bottom: -15px;
-	padding: 5px;
-}
-
-.cuitcc-post-content {
-	padding: 5px;
-}
-
-.cuitcc-post-title h4 {
-	line-height: 150%;
-}
-
-.cuitcc-post-menu {
-	background: #CCCCCC;
-}
-
-.cuitcc-post-append {
-	padding: 5px;
-	background: #FFFFF9;
-	border-bottom: 1px solid #CCCCCC;
-}
-
-.cuitcc-post-review-info {
-	padding: 5px;
-	background: #FFFFF9;
-	border-bottom: 1px solid #CCCCCC;
-}
-
-.cuitcc-post-tags {
-	padding: 5px;
-	margin: 10px;
-}
-
-.cuitcc-post-tags>.label {
+.user-review {
+	background: #FFFBC1;
 	margin-left: 10px;
-	font-size: 15px;
 }
 
-.cuitcc-reply {
-	border-top: 1px solid #CCCCCC;
-	padding: 5px 20px 10px 5px;
-}
-
-.cuitcc-node-desc {
-	padding: 0 20px;
-}
-
-.cuitcc-node-info {
-	padding: 5px;
-	margin: 10px;
-}
-
-.cuitcc-user-desc {
-	padding-right: 10px;
-}
-
-.cuitcc-user-avator {
-	padding-top: 10px;
-}
-
-.cuitcc-user-star {
-	margin-top: 30px;
-}
-
-.cuitcc-user-info-item {
-	margin: -15px auto 20px auto;
-}
-
-.cuitcc-user-review-post {
-	background: #EDF3F5;
-	padding-left: 15px;
-}
-
-.cuitcc-user-review {
-	margin-top: -15px;
-	padding-left: 30px;
-	margin-bottom: -15px;
-}
-
-.cuitcc-user-review>span {
-	display: block;
-	font-size: 22px;
-}
-
-.cuitcc-user-review>div {
-	background: #F1F1F1;
-	margin-left: -10px;
-	margin-top: -15px;
-	padding: 5px;
-	padding-left: 15px;
-}
-
-.cuitcc-user-mask {
-	padding-left: 10px;
+.review-post-connector {
+	margin-top: -18px;
+	margin-bottom: -12px;
+	margin-left: 5px;
 }
