@@ -37,7 +37,7 @@ a,.pagination>li>a {
 }
 
 .breadcrumb-div {
-	margin-bottom: -15px;
+	margin-bottom: -20px;
 }
 
 .node-bar {
@@ -80,6 +80,10 @@ a,.pagination>li>a {
 	text-align: center;
 }
 
+.content-body>table>tbody>tr>td.right-title {
+	text-align: right;
+}
+
 .right-title {
 	text-align: right;
 }
@@ -115,12 +119,9 @@ a,.pagination>li>a {
 	text-align: right;
 }
 
-.post-tags>span {
-	margin-left: 10px;
-}
-
-.post-tags>span>a {
+.post-tags>span.glyphicon-class>a {
 	font-size: 15px;
+	margin-left: 10px;
 }
 
 .content-footer {
@@ -129,8 +130,8 @@ a,.pagination>li>a {
 }
 
 .small-label {
-	height: 30px;
-	line-height: 30px;
+	height: 25px;
+	line-height: 25px;
 	color: #007FFF;
 }
 
