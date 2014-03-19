@@ -47,6 +47,9 @@ footer {
 		width: 32px;
 		height: 32px;
 	}
+    .col-xs-2>.badge{
+        margin-left:-15px;
+    }
 }
 
 a,.pagination>li>a {
