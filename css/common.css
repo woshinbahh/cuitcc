@@ -6,12 +6,12 @@ body {
 }
 
 header {
-	min-width: 360px;
+	min-width: 320px;
 	width: 100%;
 }
 
 footer {
-	min-width: 360px;
+	min-width: 320px;
 	width: 100%;
 	background: #FFFFFF;
 	margin-top: 100px;
@@ -34,7 +34,7 @@ footer {
 	height: 40px;
 }
 
-@media ( max-width : 490px) {
+@media ( max-width : 500px) {
 	.avatar-lg {
 		width: 80px;
 		height: 80px;
@@ -54,7 +54,7 @@ a,.pagination>li>a {
 }
 
 .container {
-	min-width: 360px;
+	min-width: 320px;
 }
 
 .content-left {
