@@ -1,0 +1,202 @@
+<#include "/common/_layout.html"/> <@layout>
+<div class="row">
+	<div class="col-lg-9 col-md-8 col-sm-7">
+		<div class="content-left">
+			<div class="content-title">
+				<div class="row">
+					<div class="col-lg-2 col-md-3 col-sm-4 col-xs-4">
+						<div class="pull-right">
+							<a href="/user/${user.id!}"> <img
+								class="media-object avatar-lg" src="image/${user.id!}_large.png"></a>
+							<div class="center-title" style="margin-top: 10px;">
+								<button type="button" class="btn btn-primary btn-sm">
+									<span class="glyphicon glyphicon-star"></span>加入关注
+								</button>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-10 col-md-9 col-sm-8 col-xs-8">
+						<h4>
+							<strog>${user.name!}</strog>
+							&nbsp;&nbsp;&nbsp;<small class="small-label"><span
+								class="glyphicon glyphicon-time"></span>&nbsp;&nbsp;${user.register_date?string('YYYY-MM-dd
+								HH:mm')}&nbsp;加入&nbsp;&nbsp;CUITCC第${user.id!}号会员</small>
+						</h4>
+						<h4>${user.profile!}</h4>
+						<p>${user.introduction!}</p>
+					</div>
+				</div>
+			</div>
+			<div class="content-body">
+				<div class="row">
+					<#if (user.gender != 0)>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 right-title">性别:</div>
+					<div
+						class="col-lg-10 col-md-10 col-md-10 col-xs-9 content-overflow">
+						<span><#switch user.gender><#case 1> 男 <#break> <#case 2> 女
+							<#break> <#default> 未知 </#switch></span>
+					</div>
+					</#if> <#if (user.station != 0)>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3  right-title">身份:</div>
+					<div
+						class="col-lg-10 col-md-10 col-md-10 col-xs-9 content-overflow">
+						<span><#switch user.station><#case 1> 学生 <#break> <#case 2>
+							教职工 <#break> <#case 3> 其他 <#break> <#default> 未知 </#switch></span>
+					</div>
+					</#if> <#if user.location?? >
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 right-title">所在地:</div>
+					<div
+						class="col-lg-10 col-md-10 col-md-10 col-xs-9 content-overflow">
+						<span>${user.location!}</span>
+					</div>
+					</#if> <#if user.blog?? >
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-3 right-title">个人博客:</div>
+					<div
+						class="col-lg-10 col-md-10 col-md-10 col-xs-9 content-overflow">
+						<a href="https://${user.blog}">${user.blog!}</a>
+					</div>
+					</#if>
+				</div>
+			</div>
+		</div>
+		<div class="content-left">
+			<div class="content-title">
+				<span>${user.name !} 最近最近创建了主题</span>
+			</div>
+			<div class="content-body">
+				<#if (postPage.getList()?size > 0) > <#list postPage.getList() as
+				post>
+				<div class="content-item">
+					<div class="media">
+						<a href="/post/${post.id !}">${post.title !}</a>
+						<div class="post-item-info">
+							<span class="badge"><a href="/node/${post.node_id!}">${post.node_name!}</a></span><small
+								class="small-label">&nbsp;•
+								${post.create_date?string('YYYY-MM-dd HH:mm')}<#if
+								(post.last_review_user_name??)>&nbsp;• 最后回复 <a
+								href="/user/${post.last_review_user_id!}">${post.last_review_user_name!}</a></#if>
+							</small>
+						</div>
+					</div>
+				</div>
+				</#list>
+				<div class="pagination-div">
+					<ul class="pagination">
+						<li><a href="#">←&nbsp;&nbsp;&nbsp;MORE&nbsp;&nbsp;&nbsp;→</a></li>
+					</ul>
+				</div>
+				</#if>
+			</div>
+		</div>
+		<div class="content-left">
+			<div class="content-title">
+				<span>Huxos 最近回复了主题</span>
+			</div>
+			<div class="content-body">
+				<#if (reviewPage.getList()?size > 0) > <#list reviewPage.getList()
+				as review>
+				<div class="content-item">
+					<div class="user-review-post">
+						<small class="small-label">${review.create_date?string('YYYY-MM-DD HH:mm')} 回复了&nbsp;• <a
+							href="/user/${review.post_user_id!}">${review.post_user_name!}</a>&nbsp;•<a href="/post/${review.post_id!}">发布的主题</a>
+						</small>
+						<p>${review.post_title!}</p>
+					</div>
+					<div class="review-post-connector">
+						<span class=" glyphicon glyphicon-paperclip"></span>
+					</div>
+					<div class="user-review">
+						<div>
+							<p>${review.content!}</p>
+						</div>
+					</div>
+				</div>
+				</#list>
+				<div class="pagination-div">
+					<ul class="pagination">
+						<li><a href="#">←&nbsp;&nbsp;&nbsp;MORE&nbsp;&nbsp;&nbsp;→</a></li>
+					</ul>
+				</div>
+				</#if>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-3 col-md-4 col-sm-5">
+		<div class="content-right">
+			<div class="content-title">
+				<a href="#" rel="nofollow" target="_blank"> <span
+					style="float: left; margin-right: 15px;"> <img
+						class="avatar-md" src="image/20734_large.png" />
+				</span>
+				</a> <a href="#" rel="nofollow" target="_blank"> <span
+					style="margin-bottom: 0.4em;">Huxos</span>
+					<div class="clearfix">
+						<p>
+							<small>Learn Web Design, Coding,</small>
+						</p>
+					</div>
+				</a>
+			</div>
+			<div class="content-body">
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#">节点收藏 <span class="badge">43</span></a></li>
+					<li><a href="#">主题收藏 <span class="badge">3</span></a></li>
+				</ul>
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#">提到我的 <span class="badge">42</span></a></li>
+					<li><a href="#">我的评论 <span class="badge">3</span></a></li>
+				</ul>
+				<ul class="nav nav-pills nav-justified">
+					<li><a href="#">我的关注 <span class="badge">42</span></a></li>
+					<li><a href="#">我的积分 <span class="badge">3</span></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-right">
+			<div class="content-title">
+
+				<span>我的积分</span> <span><small class="pull-right small-label">当前积分（128）</small></span>
+			</div>
+
+			<div class="content-body">
+				<small class="small-label">2013-11-11 11:11 登录获得积分 </small><span
+					style="color: red"> + 1</span> <br /> <small class="small-label">2013-11-11
+					11:11 登录获得积分 </small><span style="color: red"> + 1</span> <br /> <small
+					class="small-label">2013-11-11 11:11 登录获得积分 </small><span
+					style="color: red"> + 1</span> <br /> <small class="small-label">2013-11-11
+					11:11 登录获得积分 </small><span style="color: red"> + 1</span> <br /> <small
+					class="small-label">2013-11-11 11:11 发布主题获得积分 </small><span
+					style="color: red"> + 1</span> <br /> <small class="small-label">2013-11-11
+					11:11 登录获得积分 </small><span style="color: red"> + 1</span> <br />
+			</div>
+			<div class="pagination-div">
+				<ul class="pager">
+					<li><a class="previous" href="#">←&nbsp;&nbsp;&nbsp;MORE&nbsp;&nbsp;&nbsp;→</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="content-right">
+			<div class="content-title">
+				<span>登陆日志</span>
+			</div>
+			<div class="content-body">
+
+				<small class="small-label">2013-11-11
+					11:11&nbsp;&nbsp;→登录ＩＰ：<span style="color: red">119.6.6.7</span>
+				</small> <br /> <small class="small-label">2013-11-11
+					11:11&nbsp;&nbsp;→登录ＩＰ：<span style="color: red">119.6.6.7</span>
+				</small> <br /> <small class="small-label">2013-11-11
+					11:11&nbsp;&nbsp;→登录ＩＰ：<span style="color: red">119.6.6.7</span>
+				</small> <br /> <small class="small-label">2013-11-11
+					11:11&nbsp;&nbsp;→登录ＩＰ：<span style="color: red">119.6.6.7</span>
+				</small> <br />
+			</div>
+			<div class="pagination-div">
+				<ul class="pager">
+					<li><a class="previous" href="#">←&nbsp;&nbsp;&nbsp;MORE&nbsp;&nbsp;&nbsp;→</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+</@layout>

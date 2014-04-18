@@ -1,33 +1,61 @@
-<#include "/common/_layout.html"/> <@layout>
-<h1>JFinal Demo 项目首页</h1>
-<div class="table_box">
-	<p>欢迎来到 JFinal极速开发世界！</p>
-
-	<br><br><br> 本Demo采用FreeMarker
-				作为视图文件，您还可以使用Jsp、Velocity或自定义类型视图。 点击<a href="/user"><b>此处</b></a>开始试用Demo。
-
-				<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br /> <br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
-			<br />
+<#assign menu_active="ask1" /> <#include "/common/_layout.html"/>
+<@layout>
+<div class="row">
+	<!-- 左边 -->
+	<div class="col-lg-9 col-md-8 col-sm-7">
+		<div class="content-left" id="post">
+			<#include "/common/tab-bar.html"/> <@tab menu_active />
+			<!-- Tab 栏和 和Node 栏 -->
+			<div class="content-title"><#include "/common/node-bar.html"/>
+				<@node /></div>
+			<!-- 主题列表 -->
+			<div class="content-body"><#include
+				"/common/post_list_with_avatar.html"/> <@post /> <#include
+				"/common/_paginate.html" /> <@paginate
+				currentPage=postPage.pageNumber totalPage=postPage.totalPage
+				actionUrl="" /></div>
+		</div>
+		<div class="content-left">
+			<div class="content-title">
+				<div class="breadcrumb-div">
+					<ol class="breadcrumb">
+						<li><a href="/">CUITCC</a></li>
+						<li class="active">节点导航</li>
+					</ol>
+				</div>
+			</div>
+			<!-- 节点导航 -->
+			<div class="content-body">
+				<#list tabs as tab>
+				<table class="table content-item">
+					<tbody>
+						<tr>
+							<td
+								class="col-lg-2 col-md-3 col-sm-3 col-sm-4 col-xs-3 center-title"><a
+								href="/tab/${tab.id !}">${tab.name !}</a></td>
+							<td class="catlog-item"><#list tab.nodes as node > <a
+								href="/node/${node.id}">${node.name !}</a> </#list>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				</#list>
+			</div>
+		</div>
+	</div>
+	<!-- 右边 -->
+	<div class="col-lg-3 col-md-4 col-sm-5">
+		<!-- 用户信息 -->
+		<#include "/common/user_info.html"/>
+		<!-- 热议话题 -->
+		<#include "/common/hot_post.html"/>
+		<!-- 最热节点 -->
+		<#include "/common/node_list.html"/> <@nodeList title="最热节点"
+		nodes=hot_nodes />
+		<!-- 最近新增节点 -->
+		<@nodeList title="最近新增节点" nodes=last_nodes />
+		<!-- 站点信息 -->
+		<#include "/common/site_info.html"/>
+	</div>
 </div>
 </@layout>

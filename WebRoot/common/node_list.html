@@ -1,0 +1,13 @@
+<#macro nodeList title="节点列表" nodes="">
+<div class="content-right">
+	<div class="content-title">
+		<span>${title !}</span>
+	</div>
+	<div class="content-body">
+		<div class="content-justify">
+			<#list nodes as node> <a href="/node/${node.id !}"
+				class="btn btn-xs btn-primary">${node.name !}</a> </#list>
+		</div>
+	</div>
+</div>
+</#macro>

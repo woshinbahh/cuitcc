@@ -1,0 +1,9 @@
+<#macro node >
+<div class="node-bar">
+	<#list nodes as node >
+	<button class="btn btn-xs btn-info">
+		<a href="/node/${node.alias !}">${node.name !}</a>
+	</button>
+	</#list>
+</div>
+</#macro>

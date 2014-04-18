@@ -1,0 +1,19 @@
+<div class="content-right">
+	<div class="content-title">
+		<span>今日热议话题</span>
+	</div>
+	<div class="content-body">
+		<table class="table">
+			<tbody>
+				<#list hot_posts as hp>
+				<tr>
+					<td class="col-lg-2 col-md-2 col-sm-2 col-xs-2 center-title"><a
+						href="/user/${hp.user_id!}"><img class="avatar-sm"
+							src="image/${hp.user_id!}_large.png"></a></td>
+					<td><small><a href="/post/${hp.id!}">${hp.title!}</a></small></td>
+				</tr>
+				</#list>
+			</tbody>
+		</table>
+	</div>
+</div>

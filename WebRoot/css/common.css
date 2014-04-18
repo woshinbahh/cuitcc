@@ -1,0 +1,201 @@
+@CHARSET "UTF-8";
+
+body {
+	background-image: url("../image/grid-18px-masked.png");
+	background-repeat: repeat-x repeat-y;
+}
+
+header {
+	min-width: 320px;
+	width: 100%;
+}
+
+footer {
+	min-width: 320px;
+	width: 100%;
+	background: #FFFFFF;
+	margin-top: 100px;
+	padding-top: 10px;
+	border-top: 1px solid #CCCCCC;
+}
+
+.avatar-lg {
+	width: 100px;
+	height: 100px;
+}
+
+.avatar-md {
+	width: 75px;
+	height: 75px;
+}
+
+.avatar-sm {
+	width: 40px;
+	height: 40px;
+}
+
+@media ( max-width : 500px) {
+	.avatar-lg {
+		width: 80px;
+		height: 80px;
+	}
+	.avatar-md {
+		width: 60px;
+		height: 60px;
+	}
+	.avatar-sm {
+		width: 32px;
+		height: 32px;
+	}
+	.col-xs-2>.badge {
+		margin-left: -15px;
+	}
+}
+
+a,.pagination>li>a {
+	color: #8A96A2;
+}
+
+.tab-bar>.nav>li>a {
+	padding: 5px 7px;
+}
+
+.container {
+	min-width: 320px;
+}
+
+.content-left {
+	background: #FFFFFF;
+	padding: 5px;
+	margin: 10px 0;
+	border: 1px solid #CCCCCC;
+}
+
+.content-right {
+	background: #FFFFFF;
+	padding: 5px;
+	margin: 10px 0;
+	border: 1px solid #CCCCCC;
+}
+
+.content-title {
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.breadcrumb-div {
+	margin-bottom: -20px;
+}
+
+.node-bar {
+	margin-top: 10px;
+	padding: 5px;
+	background: #F5F5F5;
+}
+
+.node-bar>button {
+	font-size: 13px;
+}
+
+.node-bar>button>a {
+	color: #FFFFFF;
+}
+
+.pagination-div {
+	text-align: right;
+	padding-right: 2%;
+}
+
+.content-item {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #CCCCCC;
+}
+
+.content-overflow {
+	white-space: nowrap;
+	overflow-x: hidden;
+	text-overflow: ellipsis;
+}
+
+.content-body>table>tbody>tr>td {
+	border: 0px;
+	vertical-align: middle;
+}
+
+.center-title,.content-body>table>tbody>tr>td.center-title {
+	text-align: center;
+}
+
+.right-title,.content-body>table>tbody>tr>td.right-title {
+	text-align: right;
+}
+
+.content-body>table>tbody>tr>td a {
+	text-decoration: none;
+}
+
+.catlog-item>a {
+	margin-right: 20px;
+	line-height: 2em;
+}
+
+.content-justify {
+	text-align: justify;
+	margin-top: 10px;
+}
+
+.content-justify a {
+	margin: 2px 1px;
+}
+
+.content-body {
+	margin-top: 15px;
+}
+
+.content-highlight {
+	background: #FFFFF9;
+	border-left: 5px solid #FFFBC1;
+}
+
+.post-tags {
+	text-align: right;
+}
+
+.post-tags>span.glyphicon-class>a {
+	margin-left: 2px;
+}
+
+.content-footer {
+	margin-top: 10px;
+	background: #CCCCCC;
+}
+
+.small-label {
+	height: 25px;
+	line-height: 25px;
+	color: #007FFF;
+}
+
+.badge a,.label a {
+	color: #FFFFFF;
+}
+
+.badge a:hover,.badge a:active {
+	color: #007FFF;
+}
+
+.user-review-post {
+	background: #F5F5F5;
+}
+
+.user-review {
+	background: #FFFBC1;
+	margin-left: 10px;
+}
+
+.review-post-connector {
+	margin-top: -18px;
+	margin-bottom: -12px;
+	margin-left: 5px;
+}

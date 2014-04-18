@@ -1,0 +1,10 @@
+<#macro tab menu_active="">
+<div class="tab-bar">
+	<ul class="nav nav-pills">
+		<#list tabs as tab>
+		<li <#if (menu_active == tab.alias)>class="active"</#if> >
+			<a href="/node/${tab.alias !}">${tab.name!}</a></li>
+		</#list>
+	</ul>
+</div>
+</#macro>

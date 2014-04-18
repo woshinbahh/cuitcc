@@ -1,0 +1,36 @@
+<div class="content-right">
+	<div class="content-title">
+		<a href="/user/${user_info.user.id !}" rel="nofollow" target="_blank"> <span
+			style="float: left; margin-right: 15px;"> <img
+				class="avatar-md" src="image/${user_info.user.id !}_large.png" />
+		</span>
+		</a> <a href="#" rel="nofollow" target="_blank"> <span
+			style="margin-bottom: 0.4em;">${user_info.user.name !}</span>
+			<div class="clearfix">
+				<p>
+					${user_info.user.profile !}
+				</p>
+			</div>
+		</a>
+	</div>
+	<div class="content-body">
+		<ul class="nav nav-pills nav-justified">
+			<li><a href="#">节点收藏 <span class="badge">${user_info.fllowed_node_count
+						!}</span></a></li>
+			<li><a href="#">主题收藏 <span class="badge">${user_info.fllowed_post_count
+						!}</span></a></li>
+		</ul>
+		<ul class="nav nav-pills nav-justified">
+			<li><a href="#">提到我的 <span class="badge">${user_info.unread_mention_count
+						!}</span></a></li>
+			<li><a href="#">我的评论 <span class="badge">${user_info.unread_review_count
+						!}</span></a></li>
+		</ul>
+		<ul class="nav nav-pills nav-justified">
+			<li><a href="#">我的关注 <span class="badge">${user_info.fllowed_user_count
+						!}</span></a></li>
+			<li><a href="#">我的积分 <span class="badge">${user_info.user.masks
+						!}</span></a></li>
+		</ul>
+	</div>
+</div>

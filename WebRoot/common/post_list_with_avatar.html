@@ -1,0 +1,30 @@
+<#macro post> <#list postPage.getList() as post>
+<div class="content-item">
+	<div class="row">
+		<div class="col-lg-11 col-md-10 col-sm-10 col-xs-10">
+			<div class="media">
+				<a class="pull-left" href="/user/${post.user_id !}"> <img
+					class="media-object avatar-md"
+					src="/image/${post.user_id !}_large.png"></a>
+				<div class="media-body content-overflow">
+					<h4 class="media-heading">
+						<a href="/user/${post.user_id !}">${post.user_name !}</a>
+					</h4>
+					<a href="/post/${post.id !}">${post.title !}</a> <br /> <span
+						class="badge"><a href="/node/${post.node_id !}">${post.node_name
+							!}</a></span><small class="small-label">&nbsp;• ${post.create_date?string('YYYY-MM-dd
+						HH:mm')}<#if post.last_review_user_name??> &nbsp;• 最后回复 <a
+						href="/post/${post.id!}">${post.last_review_user_name !}</a></#if>
+					</small>
+				</div>
+			</div>
+		</div>
+		<#if post.review_count??>
+		<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+			<span class="badge"><a href="/post/${post.id !}">${post.review_count
+					!}</a></span>
+		</div>
+		</#if>
+	</div>
+</div>
+</#list> </#macro>

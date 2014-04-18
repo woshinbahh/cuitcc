@@ -1,0 +1,30 @@
+
+<div id="tablecontainer">
+	<table id="datatable_1">
+		<tr>
+			<th>发布时间</th>
+			<th>内容</th>
+			<th>操作</th>
+		</tr>
+		<#list globalmsg.getList() as msg>
+		<tr>
+			<input type="hidden" value="${msg.id}" />
+			<td>${msg.create_date?string('yyyy-MM-dd')}</td>
+			<td>${msg.content}</td>
+			<td><div>删除公告</div></td>
+		</tr>
+		</#list>
+	</table>
+</div>
+<div id="sysmessageput">
+
+	<textarea placeholder="这里输入公告" id="globalmsgdata"></textarea>
+	<br /> <br /> <input type="hidden" value="呵呵呵呵呵" /> <input
+		type="button" value="发布该公告" id="putglobalmsg" /><br /> <input
+		type="submit" value="清空系统消息" />
+
+</div>
+<div id="showsysmessage">这里显示要展示的公告详细信息</div>
+<div><#include "/back/fenye.html" /><@paginate
+	currentPage=globalmsg.pageNumber totalPage=globalmsg.totalPage
+	actionUrl="/backuserman/ajaxfenye/" /></div>

@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<base href="http://localhost:8080/" />
+<base src="http://localhost:8080/" />
+<link rel="stylesheet" href="css/index.css" type="text/css" />
+<script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/backlogic.js"></script>
+
+<title>系统管理后台|公告管理</title>
+</head>
+
+<body>
+	<div id="header">
+    	<div id="lefttitle">胡俊</div>
+        <div id="adminsetting"><br /><br /><a href="#">积分</a><br /><br /><br /><a href="#">设置</a></div>
+       	
+        <a href="#"><div id="block1"></div></a>
+        <a href="#"><div id="block0"></div></a>
+        <a href="#"><div id="block2"></div></a>
+        <a href="#"><div id="block3"></div></a>
+        <a href="#"><div id="block4"></div></a>
+        <a href="#"><div id="block5"></div></a>
+        <a href="#"><div id="block6"></div></a>
+    </div>
+    <!-- 系统公告div块 -->
+    <div id="sysmessage">
+        <#include "/back/globalmsg_list.html"/>   
+        </div> 
+    <div id="user">
+    	 <div id="tablecontainer_user">
+                <table id="datatable">
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>注册</th>
+                    <th>权限</th>
+                    <th>邮箱</th>
+                    <th>电话</th>
+                    <th>主页</th>
+                    <th>身份</th>
+                    <th>积分</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/0</td>
+                        <td>权限:5</td>
+                        <td>woshinb</td>
+                        <td>186</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>正常</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009</td>
+                        <td>权限:5</td>
+                        <td>woshinb</td>
+                        <td>18682</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/</td>
+                        <td>权限:5</td>
+                        <td>wos</td>
+                        <td>1868</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/</td>
+                        <td>权限:5</td>
+                        <td>woshi</td>
+                        <td>1868</td>
+                        <td>www.</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+            <div id="fenyecontainer_user">
+            		地址：${user.location}                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+    </div>
+    
+    
+    <div id="tiezi">
+    	<div id="tiezi_left_container">
+                <table id="datatable_tiezi">
+                    <th>帖子id</th>
+                    <th>发布时间</th>
+                    <th>发布人</th>
+                    <th>审核</th>
+                    
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                       
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                       <td>未审核</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                        
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                         <td>未审核</td>
+                        
+                    </tr>
+                    
+                </table>
+                <div id="fenye_user_all">                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+            </div>
+            <div id="tiezi_right_container">
+                <table id="datatable_alltiezi">
+                    <th>帖子id</th>
+                    <th>发布时间</th>
+                    <th>发布人</th>
+                    <th>审核</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                        <td><a href="#">通过</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                        <td><a href="#">通过</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                       <td>未审核</td>
+                        <td><a href="#">通过</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td>未审核</td>
+                        <td><a href="#">通过</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                         <td>未审核</td>
+                        <td><a href="#">通过</a></td>
+                    </tr>
+                    
+                </table>
+                <div id="fenye_user_shenhe">                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+            </div>
+          <div id="show_tiezi">
+          		
+          </div>  
+            
+    </div>
+    <!-- 操作记录模块 -->
+    <div id="acthistory">
+    	<div id="container_ach">
+                <table id="datatable_ach">
+                    <th>ID</th>
+                    <th>姓名</th>
+                    <th>注册</th>
+                    <th>权限</th>
+                    <th>邮箱</th>
+                    <th>电话</th>
+                    <th>主页</th>
+                    <th>身份</th>
+                    <th>积分</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/0</td>
+                        <td>权限:5</td>
+                        <td>woshinb</td>
+                        <td>186</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>正常</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009</td>
+                        <td>权限:5</td>
+                        <td>woshinb</td>
+                        <td>18682</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/</td>
+                        <td>权限:5</td>
+                        <td>wos</td>
+                        <td>1868</td>
+                        <td>www.w</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                     <tr>
+                        <td>1</td>
+                        <td>陆意</td>
+                        <td>2009/</td>
+                        <td>权限:5</td>
+                        <td>woshi</td>
+                        <td>1868</td>
+                        <td>www.</td>
+                        <td>普通</td>
+                        <td>78 分</td>
+                        <td>可用</td>
+                        <td><a href="#">禁言</a><br /><a href="#">注销</a></td>
+                    </tr>
+                    
+                    
+                </table>
+            </div>
+            <div id="fenye_ach">                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+	</div>
+    
+    <!-- 栏目管理模块 -->
+    <div id="lanmu">
+    	<div id="container_lanmu">
+                <table id="datatable_lanmu">
+                    <th>消息时间</th>
+                    <th>发布人</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                       <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                       
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    
+                </table>
+            </div>
+     <div id="lanmuput">
+                 <form action="#" method="post">
+                    <input type="text" value="这里输入栏目" id="datainput_lanmu"/><br /><br />
+                    
+                    <input type="submit" value="增加栏目" /><br />
+                    
+                 </form>
+            </div>
+            
+            <div id="fenye_lanmu">                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+    </div>
+    <!-- 节点管理模块 -->
+    <div id="jiedian">
+    	<div id="container_jiedian">
+                <table id="datatable_jiedian">
+                    <th>消息时间</th>
+                    <th>发布人</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                       <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                       
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2009/08/04/23:15</td>
+                        <td>陆意</td>
+                        
+                        <td><a href="#">删除公告</a></td>
+                    </tr>
+                    
+                </table>
+            </div>
+     <div id="jiedianput">
+                 <form action="#" method="post">
+                    <input type="text" value="这里输入节点" id="jiedianinput"/><br /><br />
+                    
+                    <input type="submit" value="增加栏目" /><br />
+                    
+                 </form>
+            </div>
+            
+            <div id="fenye_jiedian">                
+                    <a href="#">上一页</a>
+                    <a href="#"><<</a>	          
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                    <a href="#">下一页</a>                
+            </div>
+    </div>
+    <!-- 系统日志模块 -->
+     <div id="log">
+    		
+    </div>
+</body>
+</html>

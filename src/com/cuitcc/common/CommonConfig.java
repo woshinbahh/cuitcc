@@ -1,6 +1,15 @@
 package com.cuitcc.common;
 
+import com.cuitcc.controller.PostController;
 import com.cuitcc.controller.UserController;
+import com.cuitcc.controller.UserManController;
+import com.cuitcc.model.Append;
+import com.cuitcc.model.Global_msg;
+import com.cuitcc.model.Node;
+import com.cuitcc.model.Post;
+import com.cuitcc.model.Review;
+import com.cuitcc.model.Tab;
+import com.cuitcc.model.Tag;
 import com.cuitcc.model.User;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -30,8 +39,12 @@ public class CommonConfig extends JFinalConfig {
 	 * 配置路由
 	 */
 	public void configRoute(Routes me) {
-		me.add("/", CommonController.class);
+		me.add("/", IndexController.class);
 		me.add("/user", UserController.class);
+		me.add("/post", PostController.class);
+		me.add("/back", BackIndexController.class);
+		me.add("/backuserman", UserManController.class);
+		
 	}
 
 	/**
@@ -45,8 +58,16 @@ public class CommonConfig extends JFinalConfig {
 
 		// 配置ActiveRecord插件
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(c3p0Plugin);
+		arp.setShowSql(true);
 		me.add(arp);
-		arp.addMapping("user", User.class); // 映射user 表到 User模型
+		arp.addMapping("user", User.class);
+		arp.addMapping("post", Post.class);
+		arp.addMapping("node", Node.class);
+		arp.addMapping("tab", Tab.class);
+		arp.addMapping("tag", Tag.class);
+		arp.addMapping("append", Append.class);
+		arp.addMapping("review", Review.class);
+		arp.addMapping("global_msg", Global_msg.class);
 	}
 
 	/**
